@@ -17,7 +17,7 @@
 <style type="text/css">
 
 .home {
-  
+
   height: 100%;
   width: 100%;
   text-align: center;
@@ -27,15 +27,17 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  
-  
+
 }
 
 .logoDiv {
+
   margin-right:-6.5%;
+
 }
 
 .btnDiv {
+
   padding-top:15%;
   justify-content: center;
   bottom: 100;
@@ -43,9 +45,8 @@
   margin-right:0%;
   font-family:Arial, Helvetica, sans-serif;
   opacity: 0.8;
+
 }
-
-
 
 </style>
 
