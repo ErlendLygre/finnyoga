@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <router-view/>
+    <router-view :dropin='dropin'> </router-view>
   </v-app>
 </template>
 
@@ -11,11 +11,9 @@ export default {
   data () {
     
     return {
-      user: {
-        user_id: null,
-        user_name: null,
-        instructor: null,
-        instructorDescription: null,
+      dropin: {
+        
+        description: null,
         studioName: null,
         studioAddress: null,
         studioSuburb: null,
@@ -23,17 +21,14 @@ export default {
         studioCapacity: null,
         //booked spots
         studioType: null,
-        dropins: null
-      },
-      dropin: {
-        id: null,
         date: null,
+        time: null,
         price: null,
         difficulty: null,
         yogaType: null,
         bookedSpots: null,
-        owner_id: null
-      }
+      },
+      
       
     }
   }

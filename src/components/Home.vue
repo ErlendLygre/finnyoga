@@ -2,7 +2,7 @@
   <div class="home">
       <img src="../assets/logo_new.png" class="logo">
       <v-btn class="home-btn" to="/dropins" large color="success" round>Finn din neste yogatime</v-btn> <br>
-      <v-btn class="home-btn" to="/dropins" large color="success" round>Instruktør? Opprett time</v-btn>
+      <v-btn class="home-btn" to="/make-dropin" large color="success" round>Instruktør? Opprett time</v-btn>
   </div>
 </template>
 
