@@ -23,14 +23,16 @@ export default {
         studioCapacity: null,
         //booked spots
         studioType: null,
+        dropins: null
       },
       dropin: {
+        id: null,
         date: null,
         price: null,
         difficulty: null,
         yogaType: null,
         bookedSpots: null,
-        
+        owner_id: null
       }
       
     }
