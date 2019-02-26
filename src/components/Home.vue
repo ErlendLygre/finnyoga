@@ -1,53 +1,36 @@
 <template>
   <div class="home">
-      <div class="logoDiv">
-        <img src="../assets/logo_new.png">
-      </div>
-      <div class="btnDiv">
-        <v-btn to="/dropins" large color="success" round>Finn din neste yogatime</v-btn>
-      </div>
+      <img src="../assets/logo_new.png" class="logo">
+      <v-btn class="home-btn" to="/dropins" large color="success" round>Finn din neste yogatime</v-btn> <br>
+      <v-btn class="home-btn" to="/dropins" large color="success" round>Instruktør? Opprett time</v-btn>
   </div>
 </template>
 
 <script>
 </script>
-
-
-
 <style type="text/css">
 
 .home {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: 100%;
-  text-align: center;
-
-  background: url("../assets/yogastudio2.jpg") no-repeat center center fixed; 
+  background: url("../assets/yogastudio2.jpg") no-repeat center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
-.logoDiv {
-
-  margin-right:-6.5%;
-
+.logo {
+  margin: 50px 50px;
 }
 
-.btnDiv {
-
-  padding-top:15%;
-  justify-content: center;
-  bottom: 100;
-  margin-top:-20%;
-  margin-right:0%;
+.home-btn {
   font-family:Arial, Helvetica, sans-serif;
   opacity: 0.8;
-
 }
-
 </style>
 
 
