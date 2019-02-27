@@ -28,7 +28,7 @@
                     hint="F.eks 299"
                 ></v-text-field>
                 <v-text-field
-                    v-model="dropin.price"
+                    v-model="dropin.capacity"
                     label="Hvor mange er det plass til?"
                     hint="F.eks 8"
                 ></v-text-field>
