@@ -62,8 +62,6 @@ export default {
   width:34%;
   background-color:crimson;
 }
-.
-
 
 .home {
   display: flex;

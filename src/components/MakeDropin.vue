@@ -11,48 +11,65 @@
                     v-model="dropin.studioName"
                     label="Studionavn"
                     hint="Navnet på studioet ditt!"
-                    ></v-text-field>
-                </v-form>
-                <v-form v-model="valid" class="form">
-                    <v-textarea
-                        outline
-                        v-model="dropin.description"
-                        label="Studiobeskrivelse"
-                        hint="Skriv litt om studioet ditt!"
-                        ></v-textarea>
-                </v-form>
-                <v-form v-model="valid" class="form">
-                    <v-select
-                        :items="difficulty"
-                        v-model="dropin.difficulty"
-                        label="Vanskelighetsgrad"
-                        hint="Hvem passer timen din for?"
-                        ></v-select>
-                </v-form>
-                <v-menu
-                v-model="menu1"
-                :close-on-content-click="false"
-                full-width
-                max-width="290"
-                >
-                <v-text-field
-                    slot="activator"
-                    :value="dropin.date"
-                    clearable
-                    label="Dato"
-                    readonly
                 ></v-text-field>
-                <v-date-picker
-                    v-model="dropin.date"
-                    @change="menu1 = false"
-                ></v-date-picker>
+                <v-text-field
+                    v-model="dropin.yogaType"
+                    label="Type yoga"
+                    hint="F.eks Yin eller Bikram"
+                ></v-text-field>
+                <v-text-field
+                    v-model="dropin.studioSuburb"
+                    label="Bydel"
+                    hint="F.eks Torshov eller Sagene"
+                ></v-text-field>
+                <v-text-field
+                    v-model="dropin.price"
+                    label="Pris"
+                    hint="F.eks 299"
+                ></v-text-field>
+                <v-text-field
+                    v-model="dropin.price"
+                    label="Hvor mange er det plass til?"
+                    hint="F.eks 8"
+                ></v-text-field>
+                <v-textarea
+                    outline
+                    v-model="dropin.description"
+                    label="Studiobeskrivelse"
+                    hint="Skriv litt om studioet ditt!"
+                ></v-textarea>
+                <v-select
+                    :items="difficulty"
+                    v-model="dropin.difficulty"
+                    label="Vanskelighetsgrad"
+                    hint="Hvem passer timen din for?"
+                ></v-select>
+
+                <v-menu
+                    v-model="menu1"
+                    :close-on-content-click="false"
+                    full-width
+                    max-width="290"
+                >
+                    <v-text-field
+                        slot="activator"
+                        :value="dropin.date"
+                        clearable
+                        label="Dato"
+                        readonly
+                    ></v-text-field>
+                    <v-date-picker
+                        v-model="dropin.date"
+                        @change="menu1 = false"
+                    ></v-date-picker>
                 </v-menu>
                 <v-select
                     :items="clockElements"
                     v-model="dropin.time"
                     label="Klokkeslett"
-                    hint="Hvor lang og kjedelig er timen din?"
+                    hint="Hvor lang er timen din?"
                 ></v-select>
+            </v-form>
             </div>
             <v-btn class="yoga-btn" @click="pushToFirebase" large color="success" round>Instruktør? Opprett time</v-btn>
         </div>
