@@ -71,7 +71,7 @@
                 ></v-select>
             </v-form>
             </div>
-            <v-btn class="yoga-btn" @click="pushToFirebase" large color="success" round>Instruktør? Opprett time</v-btn>
+            <v-btn class="yoga-btn" @click="pushToFirebase" large color="success" round>Opprett time</v-btn>
         </div>
     </div>        
 </template>
@@ -139,6 +139,7 @@ header {
     margin-top: 20px;
     box-shadow: 12px 16px 44px  rgba(0,0,0,0.10);
     opacity: 0.9;
+    border-radius: 30px;
 }
 
 .background-div {

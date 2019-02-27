@@ -5,18 +5,20 @@
       <div class="innerLeftDiv">
         <span>
         {{item.yogaType}}
+        <br><br>
         {{item.studioSuburb}}
         </span>
       </div>
       <div class="innerMiddleDiv">
         <span>
         {{item.difficulty}}
+        <br><br>
         {{item.time}}
         </span>
       </div>
       <div class="innerRightDiv">
         <span>
-        {{item.price}}
+        {{item.price}},-
         </span>
       </div>
     </div>
@@ -49,29 +51,31 @@ export default {
 <style>
 .dropinDiv {
   display: flex;
-  background-color: lightgrey;
+  background-color: #F2F2F2;
   margin-top: 20px;
   box-shadow: 2px 2px gray;
-  border-left:7px solid black;
+  /*border-left:2px solid black;*/
   border-radius: 5px;  
-  opacity: 0.9;
+  /*opacity: 0.9;*/
 }
 
 .innerLeftDiv {
   width:33%;
-  background-color:cadetblue;
-  
+  margin: 10px;
 }
 
 .innerMiddleDiv {
+  margin: 10px;
   width:33%;
-  background-color:white;
 }
 
 .innerRightDiv {
   width:34%;
-  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-left: 2px dotted black;
+  font-size:1.8rem;
 }
 
 .home {

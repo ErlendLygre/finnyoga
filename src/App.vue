@@ -63,6 +63,7 @@ h3 {
     justify-content: center;
     width: 50%;
     margin: 0 auto;
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -71,6 +72,7 @@ h3 {
       margin: 0 auto;
       transition: 0.5s;
       display: flex;
+      
   }
 }
 .home {
