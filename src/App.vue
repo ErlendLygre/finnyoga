@@ -32,7 +32,6 @@ export default {
         //total room for users
         studioCapacity: null,
         //booked spots
-        studioType: null,
         date: null,
         time: null,
         price: null,
