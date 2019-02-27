@@ -3,13 +3,21 @@
   <div class="main-div">
     <div class="dropinDiv" v-for="item in dropins" :key="item.studioName">
       <div class="innerLeftDiv">
-        {{item.name}}
+        <span>
+        {{item.yogaType}}
+        {{item.studioSuburb}}
+        </span>
       </div>
       <div class="innerMiddleDiv">
-        {{item.description}}
+        <span>
+        {{item.difficulty}}
+        {{item.time}}
+        </span>
       </div>
       <div class="innerRightDiv">
-        {{item.date}}
+        <span>
+        {{item.price}}
+        </span>
       </div>
     </div>
   </div>
@@ -44,7 +52,9 @@ export default {
   background-color: lightgrey;
   margin-top: 20px;
   box-shadow: 2px 2px gray;
-  border-left:7px solid black;  
+  border-left:7px solid black;
+  border-radius: 5px;  
+  opacity: 0.9;
 }
 
 .innerLeftDiv {
@@ -55,14 +65,15 @@ export default {
 
 .innerMiddleDiv {
   width:33%;
-  background-color:coral;
+  background-color:white;
 }
 
 .innerRightDiv {
   width:34%;
-  background-color:crimson;
+  background-color:white;
+  border-left: 2px dotted black;
 }
-.
+
 
 
 .home {
