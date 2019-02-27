@@ -6,7 +6,7 @@
 
 <script>
 import firebase from 'firebase'
-import 'firebase/firestore'
+//import 'firebase/firestore'
 
 let config = {
   apiKey: "AIzaSyAOSpYmY1FFJHvGqEhWfOw0kagF7nKqo84",
@@ -71,6 +71,16 @@ h3 {
       width: 90%;
       margin: 0 auto;
       transition: 0.5s;
+      display: flex;
   }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/yogastudio2.jpg") no-repeat center; 
+  background-size: cover;
 }
 </style>

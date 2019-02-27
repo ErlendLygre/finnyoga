@@ -10,19 +10,12 @@
 </script>
 <style type="text/css">
 
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background: url("../assets/yogastudio2.jpg") no-repeat center; 
-  background-size: cover;
-}
+
 
 .logo {
   margin: 50px 50px;
 }
+
 
 </style>
 
