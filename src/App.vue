@@ -1,10 +1,12 @@
 <template>
   <v-app>
+    <hat></hat>
     <router-view :db='db' :event='event'> </router-view>
   </v-app>
 </template>
 
 <script>
+import Hat from './components/Hat.vue'
 import firebase from 'firebase'
 //import 'firebase/firestore'
 
@@ -33,6 +35,9 @@ export default {
         time: null,
       }
     }
+  },
+  components:{
+    Hat
   }
 }
 
@@ -74,7 +79,9 @@ h3 {
   align-items: center;
   height: 100%;
   width: 100%;
-  background: url("/assets/yogaevent2.jpg") no-repeat center; 
+  background: url("/assets/party.jpg") no-repeat center; 
   background-size: cover;
 }
+
+
 </style>
