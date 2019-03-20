@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <router-view :db='db' :dropin='dropin'> </router-view>
+    <router-view :db='db' :event='event'> </router-view>
   </v-app>
 </template>
 
@@ -24,26 +24,16 @@ export default {
   data () {
     return {
       db: db,
-      dropin: {
+      event: {
         description: null,
-        studioName: null,
-        studioAddress: null,
-        studioSuburb: null,
-        //total room for users
-        studioCapacity: null,
-        //booked spots
+        eventName: null,
+        eventLocation: null,
+        hostName: null,
         date: null,
         time: null,
-        price: null,
-        difficulty: null,
-        yogaType: null,
-        bookedSpots: null,
-      },
-      
-      
+      }
     }
   }
-
 }
 
 </script>
@@ -58,6 +48,8 @@ h3 {
 }
 
 .main-div {
+    height: 100%;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,13 +67,14 @@ h3 {
       
   }
 }
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100%;
-  background: url("/assets/yogastudio2.jpg") no-repeat center; 
+  background: url("/assets/yogaevent2.jpg") no-repeat center; 
   background-size: cover;
 }
 </style>

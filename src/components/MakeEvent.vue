@@ -1,49 +1,32 @@
 <template>
-    <div class="background-div">
         <div class ="main-div">
             <header>
                 <img src="../assets/logo_stripped.png">
             </header>
             <div class="form-container">
-            <h3>Her kan du opprette en yogatime som kundene kan se. Fyll inn informasjon om timen din nedenfor!</h3>
+            <h3>Opprett arrangement</h3>
             <v-form v-model="valid" class="form">
                 <v-text-field
-                    v-model="dropin.studioName"
-                    label="Studionavn"
-                    hint="Navnet på studioet ditt!"
+                    v-model="event.eventName"
+                    label="Navn på arrangement"
+                    hint="F.eks brettspillkveld"
                 ></v-text-field>
                 <v-text-field
-                    v-model="dropin.yogaType"
-                    label="Type yoga"
-                    hint="F.eks Yin eller Bikram"
+                    v-model="event.hostName"
+                    label="Navn på arrangør"
+                    hint="F.eks UiO Judoklubb"
                 ></v-text-field>
                 <v-text-field
-                    v-model="dropin.studioSuburb"
-                    label="Bydel"
-                    hint="F.eks Torshov eller Sagene"
-                ></v-text-field>
-                <v-text-field
-                    v-model="dropin.price"
-                    label="Pris"
-                    hint="F.eks 299"
-                ></v-text-field>
-                <v-text-field
-                    v-model="dropin.capacity"
-                    label="Hvor mange er det plass til?"
-                    hint="F.eks 8"
+                    v-model="event.eventLocation"
+                    label="Sted"
+                    hint="F.eks Blindern"
                 ></v-text-field>
                 <v-textarea
                     outline
-                    v-model="dropin.description"
-                    label="Studiobeskrivelse"
-                    hint="Skriv litt om studioet ditt!"
+                    v-model="event.description"
+                    label="Beskrivelse"
+                    hint="Skriv litt om eventet ditt."
                 ></v-textarea>
-                <v-select
-                    :items="difficulty"
-                    v-model="dropin.difficulty"
-                    label="Vanskelighetsgrad"
-                    hint="Hvem passer timen din for?"
-                ></v-select>
 
                 <v-menu
                     v-model="menu1"
@@ -53,27 +36,26 @@
                 >
                     <v-text-field
                         slot="activator"
-                        :value="dropin.date"
+                        :value="event.date"
                         clearable
                         label="Dato"
                         readonly
                     ></v-text-field>
                     <v-date-picker
-                        v-model="dropin.date"
+                        v-model="event.date"
                         @change="menu1 = false"
                     ></v-date-picker>
                 </v-menu>
                 <v-select
                     :items="clockElements"
-                    v-model="dropin.time"
+                    v-model="event.time"
                     label="Klokkeslett"
                     hint="Hvor lang er timen din?"
                 ></v-select>
             </v-form>
             </div>
             <v-btn class="yoga-btn" @click="pushToFirebase" large color="success" round>Opprett time</v-btn>
-        </div>
-    </div>        
+        </div> 
 </template>
 
 
@@ -82,7 +64,7 @@
 <script>
 export default {
     props: {
-        dropin: Object,
+        event: Object,
         db: Object
     },
     data: () => ({
@@ -117,8 +99,8 @@ export default {
     }),
     methods: {
         pushToFirebase() {
-            this.db.collection('dropins').doc().set(this.dropin)
-            this.$router.replace('dropins')
+            this.db.collection('events').doc().set(this.event)
+            this.$router.replace('events')
         }
     }
 }
@@ -141,15 +123,5 @@ header {
     opacity: 0.9;
     border-radius: 30px;
 }
-
-.background-div {
-    width: 100%;
-    height: 100%; 
-    background-color: red;
-    background: url("../assets/yogastudio2.jpg") no-repeat center; 
-    background-size: cover;
-}
-
-
 </style>
 

@@ -11,10 +11,23 @@ Vue.use(Vuetify, {
     accent: '#8c9eff',
     error: '#b71c1c'
   }
-}
-  
-  )
+})
+
 Vue.config.productionTip = false
+
+Vue.component('event', {
+  template: '<div class="card-wrapper">I´m a card</div>',
+  methods: {
+    toggle() {
+      this.showSection = !this.showSection
+    }
+  },
+  data() {
+    return {
+      showSection: true,
+    }
+  }
+})
 
 new Vue({
   router,
