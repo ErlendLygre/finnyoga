@@ -1,7 +1,7 @@
 <template>
 <div class="home">
   <div class="main-div">
-    <event v-for="event in events" v-bind="event" :key="event.eventName">
+    <event v-for="event in events" v-bind:event="event" :key="event.eventName">
     </event>
   </div>
  </div> 

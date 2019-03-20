@@ -1,6 +1,6 @@
 <template id="event">
   <div @click="show =! show" class="card-wrapper">
-    <h3>{{event.name}}</h3>
+    <p>{{event.title}}</p>
     <p v-if="show">{{event.description}}</p>
     <slot></slot>
   </div>
@@ -8,7 +8,9 @@
 
 <script>
 export default {
-  props: ['event'],
+  props: {
+    event: Object
+  },
   data() {
     return {
       show: false
@@ -21,7 +23,6 @@ export default {
 <style>
 .card-wrapper {
   width: 80%;
-  height: 100px;
   background-color: lightblue;
   margin: 0 auto;
 }

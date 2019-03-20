@@ -1,8 +1,5 @@
 <template>
         <div class ="main-div">
-            <header>
-                <img src="../assets/logo_stripped.png">
-            </header>
             <div class="form-container">
             <h3>Opprett arrangement</h3>
             <v-form v-model="valid" class="form">
@@ -54,7 +51,7 @@
                 ></v-select>
             </v-form>
             </div>
-            <v-btn class="yoga-btn" @click="pushToFirebase" large color="success" round>Opprett time</v-btn>
+            <v-btn @click="pushToFirebase" large>Opprett time</v-btn>
         </div> 
 </template>
 
@@ -73,11 +70,6 @@ export default {
         rules: {
             
         },
-        difficulty: [
-            "Nybegynnere",
-            "Litt erfarne", 
-            "Erfarne"
-        ],
         clockElements: [
             "07:00",
             "08:00",
@@ -108,20 +100,12 @@ export default {
 
 
 <style type="text/css">
-header {
-    margin: 30px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .form-container {
     background-color: #F5F5F5;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 12px 16px 44px  rgba(0,0,0,0.10);
     opacity: 0.9;
-    border-radius: 30px;
 }
 </style>
 
