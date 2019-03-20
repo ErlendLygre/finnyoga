@@ -44,44 +44,12 @@ export default {
 </script>
 
 <style>
-* {
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h3 {
   font-weight: 300;
 }
-
-.main-div {
-    height: 100%;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    margin: 0 auto;
-    
-}
-
-@media only screen and (max-width: 600px) {
-  .main-div {
-      width: 90%;
-      margin: 0 auto;
-      transition: 0.5s;
-      display: flex;
-      
-  }
-}
-
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background: url("/assets/party.jpg") no-repeat center; 
-  background-size: cover;
-}
-
 
 </style>

@@ -1,6 +1,7 @@
 <template>
 <div class="home">
   <div class="main-div">
+    <event></event>
     <event v-for="item in events" :key="item.eventName">
       {{item.eventName}}
     </event>
@@ -8,10 +9,15 @@
  </div> 
 </template>
 <script>
+import Event from "./Event.vue"
+
 export default {
   props: {
     user: Object,
     db: Object
+  },
+  components: {
+    Event
   },
   data() {
     return {

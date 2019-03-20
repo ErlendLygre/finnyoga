@@ -6,28 +6,14 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#406b3f',
-    secondary: '#b0bec5',
-    accent: '#8c9eff',
-    error: '#b71c1c'
+    primary: '#2E2E2E',
+    secondary: '#D04040',
+    accent: '#FFAA08',
+    error: '#FF4646'
   }
 })
 
 Vue.config.productionTip = false
-
-Vue.component('event', {
-  template: '<div class="card-wrapper">I´m a card</div>',
-  methods: {
-    toggle() {
-      this.showSection = !this.showSection
-    }
-  },
-  data() {
-    return {
-      showSection: true,
-    }
-  }
-})
 
 new Vue({
   router,
