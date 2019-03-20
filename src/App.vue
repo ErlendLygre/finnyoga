@@ -46,6 +46,8 @@ export default {
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 150;
 }
 
 h3 {
