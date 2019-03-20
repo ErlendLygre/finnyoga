@@ -28,9 +28,9 @@ export default {
       db: db,
       event: {
         description: null,
-        eventName: null,
-        eventLocation: null,
-        hostName: null,
+        title: null,
+        location: null,
+        host: null,
         date: null,
         time: null,
       }

@@ -7,17 +7,17 @@
             <h3>Opprett arrangement</h3>
             <v-form v-model="valid" class="form">
                 <v-text-field
-                    v-model="event.eventName"
+                    v-model="event.title"
                     label="Navn på arrangement"
                     hint="F.eks brettspillkveld"
                 ></v-text-field>
                 <v-text-field
-                    v-model="event.hostName"
+                    v-model="event.host"
                     label="Navn på arrangør"
                     hint="F.eks UiO Judoklubb"
                 ></v-text-field>
                 <v-text-field
-                    v-model="event.eventLocation"
+                    v-model="event.location"
                     label="Sted"
                     hint="F.eks Blindern"
                 ></v-text-field>

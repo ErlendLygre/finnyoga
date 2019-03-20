@@ -1,12 +1,14 @@
 <template id="event">
-  <div class="card-wrapper">
-    <button @click="show =! show">I'm a card</button>
-    <p v-if="show">Det viser!</p>
+  <div @click="show =! show" class="card-wrapper">
+    <h3>{{event.name}}</h3>
+    <p v-if="show">{{event.description}}</p>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['event'],
   data() {
     return {
       show: false
@@ -21,6 +23,7 @@ export default {
   width: 80%;
   height: 100px;
   background-color: lightblue;
+  margin: 0 auto;
 }
 </style>
 
