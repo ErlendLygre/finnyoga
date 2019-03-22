@@ -51,7 +51,7 @@
                 ></v-select>
             </v-form>
             </div>
-            <v-btn @click="pushToFirebase" large>Opprett time</v-btn>
+            <v-btn @click="pushToFirebase" large venti>Opprett time</v-btn>
         </div> 
 </template>
 
