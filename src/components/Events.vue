@@ -1,5 +1,5 @@
 <template>
-<div class="home">
+<div class="events-container">
   <div class="main-div">
     <event v-for="event in events" v-bind:event="event" :key="event.eventName">
     </event>
@@ -36,5 +36,16 @@ export default {
 
 
 <style>
+
+.events-container{
+  width:100%;
+  height:100%;
+  background-image:url("../assets/party.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
 
 </style>

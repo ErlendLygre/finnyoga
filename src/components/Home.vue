@@ -20,6 +20,9 @@
 
 
 .home {
+
+  
+  height:100%;
   
 }
 
@@ -36,6 +39,7 @@
   height:60vh;
   background-image:url("../assets/party.jpeg");
   background-size:cover;
+  height:100%;
 
 
 }
